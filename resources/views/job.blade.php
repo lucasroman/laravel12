@@ -7,5 +7,5 @@
 
     <p>This job pays <b>{{ $jobSelected['salary'] }}</b> per year.</p>
 
-    <div>{{ $jobSelected['description'] }}</div>
+    <div>{{ $jobSelected['description'] ?? 'No description setted.'}}</div>
 </x-layout>
