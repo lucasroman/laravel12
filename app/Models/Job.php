@@ -9,4 +9,6 @@ class Job extends Model
 {
     // Match with 'job_listing' table instead of 'jobs' table
     protected $table = 'job_listing';
+
+    protected $fillable = ['title', 'salary', 'description'];
 }
