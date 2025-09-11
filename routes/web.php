@@ -6,9 +6,9 @@ use App\Models\Job;
 Route::view('/', 'home');
 
 Route::get('/jobs', function() {
-    $jobs = Job::all();
-    
-    return view('jobs', ['jobs' => $jobs]);
+    return view('jobs', [
+        'jobs' => Job::all()
+    ]);
 });
 
 Route::get('/jobs/{id}', function($id) {
