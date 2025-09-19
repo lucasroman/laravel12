@@ -21,6 +21,7 @@ class JobSeeder extends Seeder
         Job::create([
             'title' => 'Director',
             'salary' => '$40,000',
+            'employer_id' => 1,
             'description' => 'On charge of take important desicions.',
         ]);
 
@@ -28,12 +29,14 @@ class JobSeeder extends Seeder
         Job::create([
             'title' => 'Programmer',
             'salary' => '$10,000',
+            'employer_id' => 1,
             'description' => 'Develop all users applications.',
         ]);
 
         Job::create([
             'title' => 'Teacher',
             'salary' => '$30,000',
+            'employer_id' => 1,
             'description' => 'Transmit knowledges to others.',
         ]);
     }
