@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Testing\Fakes\Fake;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class EmployerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->company(),
         ];
     }
 }
