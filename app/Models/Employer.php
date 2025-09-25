@@ -5,14 +5,17 @@ namespace App\Models;
 use App\Models\Job;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class Employer extends Model
 {
+    use HasFactory;
+
     protected $fillable = [ 'name' ];
     
-    public function job(): HasOne
-    {
-        return $this->hasOne(Job::class);
-    }
+    // public function job(): HasOne
+    // {
+    //     return $this->hasOne(Job::class);
+    // }
 }
