@@ -23,7 +23,7 @@ return new class extends Migration
             /* Create a constrain and delete all records related to this to 
             avoid records without reference (orphans) */
             $table->foreignIdFor(App\Models\Job::class, 'job_listing_id')
-                ->contrained()->cascadeOnDelete();
+                ->constrained()->cascadeOnDelete();
             $table->foreignIdFor(App\Models\Tag::class)
                 ->constrained()->cascadeOnDelete();
             $table->timestamps();
