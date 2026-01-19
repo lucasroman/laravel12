@@ -18,4 +18,17 @@ class Job extends Model
     {
         return $this->belongsTo(Employer::class);
     }
+
+    public function tags()
+    {
+        /* 
+        job key isn't following the convention (would be job_id) so I need
+        specify on the foreingPivotKey parameter
+        foreignPivotKey: is the key for current model
+        relatedPivotKey: is the key for related model (the other)
+        (check belongsToMany definition)
+        */
+
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');   
+    }
 }
