@@ -10,7 +10,7 @@ class Job extends Model
     use HasFactory;
     
     // Match with 'job_listing' table instead of 'jobs' table
-    protected $table = 'job_listing';
+    protected $table = 'job_listings';
 
     protected $fillable = ['title', 'salary', 'description'];
 
