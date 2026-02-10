@@ -23,6 +23,7 @@ class JobSeeder extends Seeder
         Job::truncate();
         Schema::enableForeignKeyConstraints();
 
+        // Create 3 default employers for asociate them to a job
         $employers = Employer::factory(3)->create();
 
         Job::create([
@@ -31,7 +32,6 @@ class JobSeeder extends Seeder
             'employer_id' => $employers[0]->id,
             'description' => 'On charge of take important desicions.',
         ]);
-
 
         Job::create([
             'title' => 'Programmer',
