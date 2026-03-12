@@ -32,19 +32,22 @@ class JobSeeder extends Seeder
             'employer_id' => $employers[0]->id,
             'description' => 'On charge of take important desicions.',
         ]);
-
+            
         Job::create([
             'title' => 'Programmer',
             'salary' => '$10,000',
             'employer_id' => $employers[1]->id,
             'description' => 'Develop all users applications.',
         ]);
-
+            
         Job::create([
             'title' => 'Teacher',
             'salary' => '$30,000',
             'employer_id' => $employers[2]->id,
             'description' => 'Transmit knowledges to others.',
         ]);
+
+        Job::factory(12)->create();
     }
 }
+                    
