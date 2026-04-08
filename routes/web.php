@@ -10,20 +10,19 @@ Route::get('/jobs', function() {
     each employer, insted use Eager Loading as shown below */
     $jobs = Job::with('employer')->simplePaginate(5);
     
-    return view('jobs', [
+    return view('jobs.index', [
         'jobs' => $jobs
     ]);
 });
 
 Route::get('/jobs/create', function () {
-    dd('Hi from create route');
+    return view('jobs.create');
 });
 
-Route::get('/jobs/{id}', function($id) {
-    return view('job', [
-        'jobSelected' => Job::find($id)
+Route::get('/jobs/{job}', function (Job $job) {
+    return view('jobs.show', [
+        'jobSelected' => $job
     ]);
 });
-
 
 Route::view('/contact', 'contact');
