@@ -15,10 +15,15 @@ Route::get('/jobs', function() {
     ]);
 });
 
+Route::get('/jobs/create', function () {
+    dd('Hi from create route');
+});
+
 Route::get('/jobs/{id}', function($id) {
     return view('job', [
         'jobSelected' => Job::find($id)
     ]);
 });
+
 
 Route::view('/contact', 'contact');
