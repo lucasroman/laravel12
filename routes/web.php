@@ -25,4 +25,8 @@ Route::get('/jobs/{job}', function (Job $job) {
     ]);
 });
 
+Route::post('/jobs', function () {
+    dd(request()->only(['title', 'salary']));
+});
+
 Route::view('/contact', 'contact');

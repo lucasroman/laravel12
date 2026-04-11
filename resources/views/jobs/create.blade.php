@@ -3,7 +3,9 @@
         Create Job
     </x-slot:heading>
 
-<form method="POST" action="">
+<form method="POST" action="/jobs">
+  @csrf
+  
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 pb-12 dark:border-white/10">
       <h2 class="text-base/7 font-semibold text-gray-900 dark:text-white">Create a New Job</h2>
